@@ -10,7 +10,7 @@ Note:- Consider only the distinct label numbers. The list of those label numbers
 def check_numbers(num1,num2):
     #start writing your code here
     l = [i for i in range(num1, num2+1)]
-    num_list = [j for i in l for j in l[::-1] if j > i and j % i == 0]
+    num_list = []
     for i in l :
         for j in l[::-1]:
             if j > i  and j % i ==0 :
