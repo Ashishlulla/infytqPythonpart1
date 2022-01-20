@@ -25,7 +25,7 @@ def find_max(num1, num2):
     max_num=-1
     max_list = []
     # Write your logic here
-    if num1 < num2 and len(str(num1)) <= 2 and len(str(num2)) <= 2 :
+    if num1 < num2 and len(str(num1)) <= 2:
         for i in range(num1, num2+1):
             if i % 3 == 0 and len(str(i)) and i % 5 == 0:
                 max_list.append(i)
