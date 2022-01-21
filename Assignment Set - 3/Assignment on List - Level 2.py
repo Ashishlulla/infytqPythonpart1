@@ -10,21 +10,24 @@ Perform case-sensitive comparison wherever applicable.
 """
 
 # Code:
+#lex_auth_012693795044450304151
+
 def calculate_bill_amount(gems_list, price_list, reqd_gems,reqd_quantity):
     bill_amount=0
+    #Write your logic here
     a = dict(zip(gems_list, price_list))
     b = dict(zip(reqd_gems, reqd_quantity))
-    #Write your logic here
-    for gems in reqd_gems:
-        if gems in gems_list:
-            bill_amount = bill_amount + a[gems]*b[gems]
+    for i in reqd_gems:
+        if i in gems_list:
+            bill_amount = bill_amount + a[i]*b[i]
         else:
             bill_amount = -1
-    if bill_amount!=-1 and bill_amount > 30000:
-        bill_amount = bill_amount - bill_amount*0.05
+            break
+    if bill_amount > 30000:
+        return bill_amount - bill_amount*0.05
     else:
         pass
-        
+    
     return bill_amount
 
 #List of gems available in the store
